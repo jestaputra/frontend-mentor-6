@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Frontend Mentor | Space tourism website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  </head>
+  <body>
+
+    <div class="wrap-menu">
+      <ul>
+        <li class="active"><a href="index.html">00 HOME</a></li>
+        <li><a href="destination.html">01 DESTINATION</a></li>
+        <li><a href="crew.html">02 CREW</a></li>
+        <li><a href="technology.html">03 TECHNOLOGY</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="landing-page">
+        <header>
+          <div class="logo"><img src="assets/shared/logo.svg" alt="" /></div>
+          <nav>
+            <ul>
+              <li class="active"><a href="index.html">00 HOME</a></li>
+              <li><a href="destination.html">01 DESTINATION</a></li>
+              <li><a href="crew.html">02 CREW</a></li>
+              <li><a href="technology.html">03 TECHNOLOGY</a></li>
+            </ul>
+            <div onclick="showMenu()" class="menu"><i class='bx bx-menu'></i></div>
+          </nav>
+        </header>
+        <div class="text-box">
+          <p>
+            SO, YOU WANT TO TRAVEL TO <br /><br />
+            <span>SPACE</span> <br /><br />
+            LET'S FACE IT; IF YOU WANT TO GO TO SPACE, YOU MIGHT AS WELL
+            GENUINELY GO TO OUTER SPACE AND NOT HOVER KIND OF ON THE EDGE OF IT.
+            WELL SIT BACK, AND RELAX BECAUSE WE'LL GIVE YOU A TRULY OUT OF THIS
+            WORLD EXPERIENCE! EXPLORE
+          </p>
+          <button>EXPLORE</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../main.js"></script>
+    <script>
+        let wrapMenu = document.querySelector(".wrap-menu")
+        let textBox = document.querySelector(".text-box")
+
+        function showMenu(){
+          wrapMenu.classList.toggle("active")
+          textBox.classList.toggle("down")
+          if(window.scrollY > 0){
+            textBox.classList.remove("down")
+          }
+        }
+    </script>
+  </body>
+</html>
